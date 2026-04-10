@@ -1,5 +1,7 @@
 import os
 from pathlib import Path
+from django.views.decorators.clickjacking import xframe_options_exempt
+from django.http import HttpResponse
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -7,7 +9,7 @@ SECRET_KEY = 'your-secret-key-change-this-in-production'
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://portfolio-0r4x.onrender.com/', '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['portfolio-0r4x.onrender.com', '127.0.0.1', 'localhost']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -27,6 +29,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'portfolio_project.urls'
@@ -47,6 +50,9 @@ TEMPLATES = [
     },
 ]
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://portfolio-0r4x.onrender.com"
+]
 WSGI_APPLICATION = 'portfolio_project.wsgi.application'
 
 DATABASES = {
@@ -84,5 +90,12 @@ STATICFILES_DIRS = [
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+CORS_ALLOW_ALL_ORIGINS = True
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+X_FRAME_OPTIONS = 'ALLOWALL'
+
+@xframe_options_exempt
+def index(request):
+    return HttpResponse("Hello, world!")
