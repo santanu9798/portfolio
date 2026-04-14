@@ -12,20 +12,19 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body class="bg-dark text-light">
-    <!-- Navigation -->
+
+
+<!-- Navigation -->
     <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top shadow">
     <div class="container">
-
         <!-- Brand -->
         <a class="navbar-brand fw-bold text-info" href="#">
             Santanu Kumar
         </a>
-
         <!-- Mobile Toggle Button -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>
-
         <!-- Menu -->
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
@@ -55,8 +54,8 @@
     </div>
 </nav>
 
-<!-- Mobile Menu -->
 
+<!-- Mobile Menu -->
 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
     <span class="navbar-toggler-icon"></span>
 </button>
@@ -90,99 +89,76 @@
 
     <section id="home" class="d-flex align-items-center bg-dark text-light" style="min-height:100vh; padding-top:80px; padding-bottom:50px;">
     <div class="container">
-
         <div class="row align-items-center">
-
             <!-- Left Content -->
             <div class="col-md-6 text-center text-md-start">
-
                 <h1 class="display-4 fw-bold mb-3">
                     Hi, I'm <span class="text-info">Santanu Kumar</span>
                 </h1>
-
                 <h3 class="mb-4 text-secondary">
                     Software Developer
                 </h3>
-
                 <p class="lead text-secondary mb-4">
                     Passionate about clean code and user-friendly design
                 </p>
-
                 <!-- Buttons -->
                 <div class="mb-4">
                     <a href="#contact" class="btn btn-info me-3 px-4 py-2 shadow">
                         Contact Me
                     </a>
-
                     <a href="#projects" class="btn btn-outline-light px-4 py-2">
                         View Work
                     </a>
                 </div>
-
                 <!-- Social Icons -->
                 <div>
                     <a href="https://github.com/santanu9798" class="text-secondary me-3 fs-4">
                         <i class="bi bi-github"></i>
                     </a>
-
                     <a href="https://www.linkedin.com/in/santanu-kumar-1152b0235/" class="text-secondary me-3 fs-4">
                         <i class="bi bi-linkedin"></i>
                     </a>
-
                     <a href="#" class="text-secondary me-3 fs-4">
                         <i class="bi bi-instagram"></i>
                     </a>
-
                     <a href="https://twitter.com/santanu9798" class="text-secondary fs-4">
                         <i class="bi bi-twitter"></i>
                     </a>
                 </div>
-
             </div>
-
             <!-- Right Image -->
             <div class="col-md-6 d-none d-md-flex justify-content-center mt-4 mt-md-0">
-
                 <div class="position-relative">
-
                     <!-- Glow Effect -->
                     <div class="position-absolute rounded-circle"
                         style="width:300px; height:300px; background: radial-gradient(circle, #0dcaf0, #0d6efd); filter: blur(60px); opacity:0.2;">
                     </div>
-
                     <!-- Image -->
                     <img src="{% static 'images/profile.jpg' %}"
                         alt="Developer"
                         class="rounded-circle border border-secondary shadow"
                         style="width:280px; height:280px; object-fit:cover; position:relative; z-index:1;">
-
                 </div>
-
             </div>
-
         </div>
-
     </div>
 </section>
+
+
     <!-- About Section -->
     <section id="about" class="py-5 bg-dark text-light">
     <div class="container">
-
         <!-- Heading -->
         <h2 class="text-center fw-bold mb-5">
             About <span class="text-info">Me</span>
         </h2>
-
         <div class="row align-items-center">
-
             <!-- Image -->
             <div class="col-md-6 text-center mb-4 mb-md-0">
                 <div class="position-relative d-inline-block">
-
                     <!-- Border Effect -->
                     <div class="position-absolute border border-info rounded"
                         style="width:100%; height:100%; top:-10px; left:-10px; z-index:0;"></div>
-
                     <!-- Image -->
                     <img src="{% static 'images/about.jpg' %}"
                         alt="About Me"
@@ -190,47 +166,36 @@
                         style="max-height:400px; z-index:1;">
                 </div>
             </div>
-
             <!-- Content -->
             <div class="col-md-6">
-
                 <h4 class="fw-semibold mb-3">Who am I?</h4>
-
                 <p class="text-secondary mb-4">
                     I'm Santanu, a self-taught Software Developer from Delhi, India.<br>
                     I'm always curious and passionate about building stunning, responsive, and user-friendly websites.
                 </p>
-
                 <!-- Info Grid -->
                 <div class="row mb-4">
-
                     <div class="col-6 mb-2">
                         <i class="bi bi-person-fill text-info me-2"></i>
                         <span>Santanu Kumar</span>
                     </div>
-
                     <div class="col-6 mb-2">
                         <i class="bi bi-envelope-fill text-info me-2"></i>
                         <span>8579santanu@gmail.com</span>
                     </div>
-
                     <div class="col-6 mb-2">
                         <i class="bi bi-telephone-fill text-info me-2"></i>
                         <span>+91 8579077272</span>
                     </div>
-
                     <div class="col-6 mb-2">
                         <i class="bi bi-geo-alt-fill text-info me-2"></i>
                         <span>Delhi, India</span>
                     </div>
-
                 </div>
-
                 <!-- Button -->
                 <a href="{% static 'Images/Santanu-kumar.pdf' %}" class="btn btn-outline-info">
                     <i class="bi bi-download me-2"></i> Download CV
                 </a>
-
             </div>
         </div>
     </div>
@@ -242,11 +207,9 @@
             <h2 class="display-5 fw-bold text-center mb-5">
                 My <span class="text-primary">Skills</span>
             </h2>
-            
             <div class="row">
                 <div class="col-lg-6">
                     <h3 class="h4 fw-semibold mb-4">Frontend Development</h3>
-                    
                     <div class="mb-4">
                         <div class="d-flex justify-content-between mb-2">
                             <span class="fw-medium">HTML</span>
@@ -256,7 +219,6 @@
                             <div class="progress-bar bg-primary" style="width: 95%"></div>
                         </div>
                     </div>
-                    
                     <div class="mb-4">
                         <div class="d-flex justify-content-between mb-2">
                             <span class="fw-medium">CSS</span>
@@ -266,7 +228,6 @@
                             <div class="progress-bar bg-primary" style="width: 90%"></div>
                         </div>
                     </div>
-                    
                     <div class="mb-4">
                         <div class="d-flex justify-content-between mb-2">
                             <span class="fw-medium">JavaScript</span>
@@ -276,7 +237,6 @@
                             <div class="progress-bar bg-primary" style="width: 85%"></div>
                         </div>
                     </div>
-                    
                     <div class="mb-4">
                         <div class="d-flex justify-content-between mb-2">
                             <span class="fw-medium">Angular</span>
@@ -287,10 +247,8 @@
                         </div>
                     </div>
                 </div>
-                
                 <div class="col-lg-6">
                     <h3 class="h4 fw-semibold mb-4">Backend & Other Skills</h3>
-                    
                     <div class="mb-4">
                         <div class="d-flex justify-content-between mb-2">
                             <span class="fw-medium">Python</span>
@@ -300,7 +258,6 @@
                             <div class="progress-bar bg-info" style="width: 85%"></div>
                         </div>
                     </div>
-                    
                     <div class="mb-4">
                         <div class="d-flex justify-content-between mb-2">
                             <span class="fw-medium">MySQL</span>
@@ -310,7 +267,6 @@
                             <div class="progress-bar bg-info" style="width: 80%"></div>
                         </div>
                     </div>
-                    
                     <div class="mb-4">
                         <div class="d-flex justify-content-between mb-2">
                             <span class="fw-medium">Rest API</span>
@@ -320,7 +276,6 @@
                             <div class="progress-bar bg-info" style="width: 75%"></div>
                         </div>
                     </div>
-                    
                     <div class="mb-4">
                         <div class="d-flex justify-content-between mb-2">
                             <span class="fw-medium">Java</span>
@@ -337,39 +292,39 @@
                 <h3 class="h4 fw-semibold mb-4 text-center">Other Technologies</h3>
                 <div class="d-flex flex-wrap justify-content-center gap-3">
                     <div class="d-flex align-items-center px-3 py-2 bg-secondary rounded-3">
-                        <i class="fab fa-github text-primary me-2"></i>
+                        <i class="bi bi-github fs-5"></i>
                         <a href="https://github.com/" target="_blank" class="text-white text-decoration-none">GitHub</a>
                     </div>
                     <div class="d-flex align-items-center px-3 py-2 bg-secondary rounded-3">
-                        <i class="fas fa-database text-warning me-2"></i>
+                        <i class="bi bi-database"></i>
                         <a href="https://www.mysql.com/" target="_blank" class="text-white text-decoration-none">MySQL</a>
                     </div>
                     <div class="d-flex align-items-center px-3 py-2 bg-secondary rounded-3">
-                        <i class="fab fa-linux text-white me-2"></i>
+                        <i class="bi bi-linux"></i>
                         <a href="https://www.linux.org/" target="_blank" class="text-white text-decoration-none">Linux</a>
                     </div>
                     <div class="d-flex align-items-center px-3 py-2 bg-secondary rounded-3">
-                        <i class="fas fa-code text-primary me-2"></i>
+                        <i class="bi bi-TypeScript"></i>
                         <a href="https://typescriptlang.org/" target="_blank" class="text-white text-decoration-none">Typescript</a>
                     </div>
                     <div class="d-flex align-items-center px-3 py-2 bg-secondary rounded-3">
-                        <i class="fab fa-wordpress text-primary me-2"></i>
+                        <i class="bi bi-wordpress"></i>
                         <a href="https://www.wordpress.org/" target="_blank" class="text-white text-decoration-none">WordPress</a>
                     </div>
                     <div class="d-flex align-items-center px-3 py-2 bg-secondary rounded-3">
-                        <i class="fab fa-docker text-primary me-2"></i>
+                        <i class="fa-brands fa-docker"></i>
                         <a href="https://docker.com/" target="_blank" class="text-white text-decoration-none">Docker</a>
                     </div>
                     <div class="d-flex align-items-center px-3 py-2 bg-secondary rounded-3">
-                        <i class="fab fa-angular text-danger me-2"></i>
+                        <i class="bi bi-angular"></i>
                         <a href="https://angular.io/" target="_blank" class="text-white text-decoration-none">Angular</a>
                     </div>
                     <div class="d-flex align-items-center px-3 py-2 bg-secondary rounded-3">
-                        <i class="fas fa-database text-warning me-2"></i>
+                        <i class="bi bi-database"></i>
                         <a href="https://www.mongodb.com/" target="_blank" class="text-white text-decoration-none">MongoDB</a>
                     </div>
                     <div class="d-flex align-items-center px-3 py-2 bg-secondary rounded-3">
-                        <i class="fas fa-code text-success me-2"></i>
+                        <i class="devicon-django-plain colored fs-5"></i>
                         <a href="https://www.djangoproject.com/" target="_blank" class="text-white text-decoration-none">Django</a>
                     </div>
                     <div class="d-flex align-items-center px-3 py-2 bg-secondary rounded-3">
@@ -388,10 +343,6 @@
                 <span class="text-primary">Certifications</span>
             </h2>
             <div class="row g-4">
-
-
-
-
                 <!-- Certificate of Participation -->
                 <div class="col-md-4">
                     <div class="bg-secondary p-4 rounded-3 shadow-sm h-100 d-flex flex-column justify-content-between">
@@ -405,7 +356,6 @@
                         </div>
                     </div>
                 </div>
-
                 <!-- Certificate Enhancing Study Skills -->
                 <div class="col-md-4">
                     <div class="bg-secondary p-4 rounded-3 shadow-sm h-100 d-flex flex-column justify-content-between">
