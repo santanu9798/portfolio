@@ -1,0 +1,99 @@
+/* Custom styles for Bootstrap-based portfolio */
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #6c757d;
+}
+::-webkit-scrollbar-thumb {
+    background: #495057;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #343a40;
+}
+
+/* Animation for skills */
+@keyframes skillProgress {
+    from { width: 0; }
+    to { width: var(--progress); }
+}
+
+.skill-progress {
+    animation: skillProgress 1.5s ease-out forwards;
+}
+
+/* Pulse animation for CTA */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+/* Custom gradient text */
+.text-gradient {
+    background: linear-gradient(90deg, #0d6efd, #6610f2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Dark theme adjustments */
+.bg-dark {
+    background-color: #212529 !important;
+}
+
+.text-light {
+    color: #f8f9fa !important;
+}
+
+.text-muted {
+    color: #6c757d !important;
+}
+
+/* Card hover effects */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* Progress bar animation */
+.progress-bar {
+    transition: width 1.5s ease-out;
+}
+
+/* Social icons */
+.social-icon {
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Mobile menu animation */
+.mobile-menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.mobile-menu.show {
+    max-height: 500px;
+}
+}
+
+@keyframes loadSkill {
+    from { width: 0; }
+    to { width: var(--width); }
+}

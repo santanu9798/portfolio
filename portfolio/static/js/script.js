@@ -1,23 +1,22 @@
-// Mobile menu toggle
-const mobileMenuButton = document.querySelector('.mobile-menu-button');
-const mobileMenu = document.querySelector('.mobile-menu');
+// Mobile menu toggle for Bootstrap
+const mobileMenuButton = document.querySelector('.navbar-toggler');
+const mobileMenu = document.querySelector('.navbar-collapse');
 
-if (mobileMenuButton) {
-    mobileMenuButton.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-    });
-}
+// Bootstrap handles the mobile menu automatically, but we can add custom behavior if needed
 
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        
-        // Close mobile menu if open
-        if (mobileMenu) {
-            mobileMenu.classList.add('hidden');
+
+        // Close mobile menu if open (Bootstrap 5)
+        const navbarCollapse = document.querySelector('.navbar-collapse');
+        if (navbarCollapse && navbarCollapse.classList.contains('show')) {
+            const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+                hide: true
+            });
         }
-        
+
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
             target.scrollIntoView({
