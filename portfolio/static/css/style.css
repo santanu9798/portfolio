@@ -5,14 +5,14 @@
     width: 8px;
 }
 ::-webkit-scrollbar-track {
-    background: #6c757d;
+    background: #1515ce;
 }
 ::-webkit-scrollbar-thumb {
-    background: #495057;
+    background: #40678d;
     border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb:hover {
-    background: #343a40;
+    background: #0452a0;
 }
 
 /* Animation for skills */
@@ -38,7 +38,7 @@
 
 /* Custom gradient text */
 .text-gradient {
-    background: linear-gradient(90deg, #0d6efd, #6610f2);
+    background: linear-gradient(90deg, #f8f8fa, #6610f2);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -46,15 +46,16 @@
 
 /* Dark theme adjustments */
 .bg-dark {
-    background-color: #212529 !important;
+    color: pink !important;
+    background-color: #2d3946 !important;
 }
 
 .text-light {
-    color: #f8f9fa !important;
+    color: #ffffff !important;
 }
 
 .text-muted {
-    color: #6c757d !important;
+    color: #d2d5d8 !important;
 }
 
 /* Card hover effects */
@@ -97,7 +98,7 @@
 }
 
 .navbar-nav .nav-link:hover {
-    color: #0dcaf0 !important;
+    color: #e3ebec !important;
 }
 
 
