@@ -5,14 +5,14 @@
     width: 8px;
 }
 ::-webkit-scrollbar-track {
-    background: #1515ce;
+    background: #e1e1e7;
 }
 ::-webkit-scrollbar-thumb {
     background: #40678d;
     border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb:hover {
-    background: #0452a0;
+    background: #ffffff;
 }
 
 /* Animation for skills */
@@ -38,7 +38,7 @@
 
 /* Custom gradient text */
 .text-gradient {
-    background: linear-gradient(90deg, #f8f8fa, #6610f2);
+    background: linear-gradient(90deg, #f8f8fa, #6213e0);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -75,15 +75,12 @@
 
 /* Social icons */
 .social-icon {
+    background-color: pink;
     transition: all 0.3s ease;
 }
 
 .social-icon:hover {
     transform: scale(1.1);
-}
-
-.container-nav-item{
-    background-color: aqua;
 }
 
 /* Mobile menu animation */
