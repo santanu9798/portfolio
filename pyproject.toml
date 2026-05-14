@@ -1,24 +1,14 @@
-[tool.poetry]
+[project]
 name = "portfolio"
 version = "0.1.0"
-description = ""
-authors = ["Your Name <your.email@example.com>"]
-
-[project]
+requires-python = ">=3.9"
 dependencies = [
-    "django>=4.0,<5.0"
+    "django>=4.0,<5.0",
+    "gunicorn",
+    "whitenoise",
+    "django-cors-headers",
 ]
 
-[project.scripts]
-app = "portfolio_project.wsgi:application"
-
-[tool.poetry.dependencies]
-python = "^3.8"
-django = "^4.0"
-
-[tool.poetry.scripts]
-app = "portfolio_project.wsgi:application"
-
 [build-system]
-requires = ["poetry-core>=1.0.0"]
-build-backend = "poetry.core.masonry.api"
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.backends.legacy:build"
