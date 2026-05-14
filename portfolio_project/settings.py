@@ -7,9 +7,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = 'your-secret-key-change-this-in-production'
 
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['portfolio-0r4x.onrender.com', '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['portfolio-0r4x.onrender.com', '127.0.0.1', 'localhost' '.vercel.app',
+    'your-project.vercel.app',]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -30,7 +31,10 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'corsheaders.middleware.CorsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 ROOT_URLCONF = 'portfolio_project.urls'
 
@@ -51,7 +55,8 @@ TEMPLATES = [
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://portfolio-0r4x.onrender.com"
+    "https://portfolio-0r4x.onrender.com",
+    "https://your-project.vercel.app",
 ]
 WSGI_APPLICATION = 'portfolio_project.wsgi.application'
 
@@ -87,6 +92,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'portfolio', 'static'),
 ]
+
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
