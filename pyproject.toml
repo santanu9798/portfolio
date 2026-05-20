@@ -1,6 +1,8 @@
 [project]
 name = "portfolio"
 version = "0.1.0"
+description = "Personal Django portfolio website"
+readme = "README.md"
 requires-python = ">=3.9"
 dependencies = [
     "django>=4.0,<5.0",
@@ -10,5 +12,5 @@ dependencies = [
 ]
 
 [build-system]
-requires = ["setuptools>=61.0"]
-build-backend = "setuptools.backends.legacy:build"
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"

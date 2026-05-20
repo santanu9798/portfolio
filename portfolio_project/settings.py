@@ -7,7 +7,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = 'your-secret-key-change-this-in-production'
 
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['portfolio-0r4x.onrender.com', '127.0.0.1', 'localhost' '.vercel.app',
     'your-project.vercel.app',]
