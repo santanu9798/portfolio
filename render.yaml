@@ -1,0 +1,26 @@
+services:
+  - type: web
+    name: portfolio
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt && python manage.py collectstatic --no-input
+    startCommand: gunicorn portfolio_project.wsgi:application
+    healthCheckPath: /
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.7
+      - key: SECRET_KEY
+        fromDatabase:
+          name: postgres
+          property: postgres_password
+      - key: DEBUG
+        value: "False"
+      - key: DATABASE_URL
+        fromDatabase:
+          name: postgres
+          property: connection_string
+  
+  - type: pserv
+    name: postgres
+    ipAddress: 10.142.0.3
+    plan: free

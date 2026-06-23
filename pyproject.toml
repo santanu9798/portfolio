@@ -1,10 +1,9 @@
-[project]
-name = "portfolio"
-version = "0.1.0"
-description = "Personal Django portfolio website"
-readme = "README.md"
-requires-python = ">=3.9"
-dependencies = [
+project.name = "portfolio"
+project.version = "0.1.0"
+project.description = "Personal Django portfolio website"
+project.readme = "README.md"
+project.requires-python = ">=3.9"
+project.dependencies = [
     "django>=4.0,<5.0",
     "gunicorn",
     "whitenoise",
