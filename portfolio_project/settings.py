@@ -12,9 +12,10 @@ SECRET_KEY = os.getenv('SECRET_KEY', 'your-secret-key-change-this-in-production'
 DEBUG = os.getenv('DEBUG', 'False') == 'True'
 
 ALLOWED_HOSTS = [
-    'portfolio-0r4x.onrender.com', 
-    '127.0.0.1', 
-    'localhost', 
+    'portfolio-0r4x.onrender.com',
+    '127.0.0.1',
+    'localhost',
+    '.onrender.com',
     '.render.com',
     '.vercel.app',
     'your-project.vercel.app',
@@ -22,7 +23,8 @@ ALLOWED_HOSTS = [
 
 # Get allowed hosts from environment if provided
 if os.getenv('ALLOWED_HOSTS'):
-    ALLOWED_HOSTS.extend(os.getenv('ALLOWED_HOSTS').split(','))
+    ALLOWED_HOSTS = [host.strip() for host in os.getenv('ALLOWED_HOSTS').split(',') if host.strip()]
+
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -122,6 +124,7 @@ CORS_ALLOW_ALL_ORIGINS = True
 CSRF_TRUSTED_ORIGINS = [
     "https://portfolio-0r4x.onrender.com",
     "https://your-project.vercel.app",
+    "https://*.render.com",
     "https://*.onrender.com",
 ]
 
