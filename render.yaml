@@ -5,14 +5,11 @@ services:
     plan: free
     buildCommand: pip install -r requirements.txt && python manage.py collectstatic --no-input
     startCommand: gunicorn portfolio_project.wsgi:application
+    releaseCommand: python manage.py migrate
     healthCheckPath: /
     envVars:
       - key: PYTHON_VERSION
         value: 3.11.7
-      - key: SECRET_KEY
-        fromDatabase:
-          name: postgres
-          property: postgres_password
       - key: DEBUG
         value: "False"
       - key: DATABASE_URL
